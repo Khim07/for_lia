@@ -1,0 +1,45 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="hehu.jpg">
+    <title>For Lia ONLY</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Initial Valentine's Message -->
+    <div id="valentineMessage">
+        <h1>Happy Valentine's Day, my baby!</h1>
+    </div>
+<!-- Personal Message -->
+<div id="personalMessage" style="display: none;">
+    <p class="personal-intro">My dearest Julia,</p>
+    <p class="personal-message">
+        I didn’t have enough time to finish this. I was thinking to add some pictures of us but I wasn’t able to—I’ll bawi next time. 
+        I’m very very very grateful to have you. You deserve MORE but this is the best thing I can do for now and I hope you like it. 
+        I love you so much!
+    </p>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="nothing.mp3" type="audio/mp3">
+</audio>
+<script>
+    document.body.addEventListener("click", () => {
+        document.getElementById("bgMusic").play();
+    }, { once: true });
+</script>
+
+<!-- Main Content (Initially Hidden) -->
+<div id="mainContent" style="display: none;">
+    <h2 id="title">I love...</h2>
+    <p id="reason" class="fade-text"></p> <!-- Reason text appears here -->
+    <p id="signature" class="signature" style="display: none;">Love,<br><br>Khim</p>
+</div>
+
+    <script src="script.js"></script>
+</body>
+
+
+

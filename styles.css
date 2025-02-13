@@ -1,0 +1,208 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Full-page styling */
+body {
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    background: linear-gradient(to bottom left, #ffccdd, #ff6699);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#personalMessage, #mainContent {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+/* Title Styling */
+h2 {
+    font-size: 2rem;
+    color: #ff3d6d;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Main container */
+.container {
+    background: none;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+#valentineMessage {
+    font-size: 3rem;
+    color: #ff3d6d; /* Change to any color you like */
+    font-style: italic;
+    text-align: center;
+    opacity: 1;
+    transition: color 0.5s ease-in-out; /* Smooth transition if needed */
+}
+
+/* Styling for "My dearest Julia," */
+.personal-intro {
+    text-align: left;
+    font-size: 40px;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-left: 400px;
+}
+
+/* Style for the message after "My dearest Julia," */
+.personal-message {
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    max-width: 50%; /* Adjust width to avoid stretching */
+    margin: 20px auto; /* Centers it and adds space */
+    padding: 20px; /* Adds inner spacing */
+    font-size: 30px;
+    text-align: center; /* Keeps text centered */
+    line-height: 1.9; /* Improves readability */
+}
+
+
+#reason {
+    color:white;
+    font-family: "Times New Roman", Times, serif;
+    max-width: 80%; /* Adjust width to avoid stretching */
+    margin: 20px auto; /* Centers it and adds space */
+    padding: 20px; /* Adds inner spacing */
+    text-align: center; /* Keeps text centered */
+    line-height: 1.6;/* Improves readability */
+    font-size: 25px;
+
+
+}
+
+/* Reason Box */
+.reason-box {
+    background: white;
+    color: #ff4d94;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Reason text animation */
+#reason {
+    font-size: 24px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out;
+}
+
+
+/* Show animation when class is added */
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Apply Fade-in Animation to Reason Text */
+#reason {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Class to trigger fade-in */
+.show {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.show.active {
+    opacity: 1;
+}
+
+/* Smooth fade effect */
+#reason {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Floating Hearts Animation */
+@keyframes floatHeart {
+    0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) scale(0.5);
+        opacity: 0;
+    }
+}
+
+
+.signature {
+    text-align: right;
+    font-size: 35px;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    color: #ffffff;
+    margin-top: 0px;
+    margin-right: 50px;
+}
+
+
+
+/* Heart Shape */
+.heart {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #ff4d94;
+    transform: rotate(-45deg);
+    animation: floatHeart linear infinite;
+    opacity: 0.8;
+
+    /* Fix: Remove any box appearance */
+    display: inline-block;
+    margin: 0;
+}
+
+/* Rounded parts of the heart */
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #ff4d94;
+    border-radius: 50%;
+}
+
+/* Top left circle */
+.heart::before {
+    top: -20px;
+    left: 0;
+}
+
+/* Top right circle */
+.heart::after {
+    top: 0;
+    left: 20px;
+}

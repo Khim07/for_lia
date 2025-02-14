@@ -39,6 +39,7 @@ const reasons = [
     "I love that you miss me every second I'm gone.",
     "I love your overly jealous side.",
     "I love that you're a lefty because it perfectly matches with me (a righty).",
+    "I love learning new Ilocano words from you.",
     "I love how you always want to sit beside me whenever we're eating.",
     "I love how you complain about small details that I often forget.",
     "I love how you always want us to eat at the same time.",
